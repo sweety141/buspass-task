@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>General Bus pass applicatin</h1>
+    </center>
+    <form action="./submit.html" method="get">
+        <!-- applicant details -->
+    <fieldset>
+        <legend><h3>Applicant Details</h3></legend>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" pattern="[A-Za-z]{8,20}" title="length should be min 8 and max 20 characters with combination of small and capital letters">&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="fathers name">Father's/Guardian's Name:</label>
+        <input type="text" name="father name" id="name" pattern="[A-Za-z]{8,20}" title="length should be min 8 and max 20 characters with combination of small and capital letters"><br><br>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" name="DOB" id="DOB">&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male">
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="gender">Female</label><br><br>
+
+        <label for="age">Ages as on:</label>
+        <input type="text" name="age" id="age" pattern="[0-9]{1,3}" title="length should be min 1 and max 3 characters in the form of numbers">&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="adhaar">Adhaar No:</label>
+        <input type="text" pattern="[0-9]{12}" title="length should be 12 characters in the form of numbers" required><br><br>
+
+        <label for="mobile">Mobile No:</label>
+        <input type="text" name="mobile" id="mobile" pattern="[0-9]{10}" title="length should be 10 characters in the form of numbers">&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="email">Email Id:</label>
+        <input type="email" name="email" id="email" pattern="[a-zA-Z\d@.]{5,}" title="length should be min 5 characters with the combination of characters like small,capital,numbers,@ symbol and dot symbol" required><br><br>
+
+        <label for="photo">Photo:</label>
+        <input type="file" name="photo" id="photo" accept="image/*">
+    </fieldset>
+
+    <!-- residential address details-->
+     <fieldset>
+        <legend><h3>Residential Address Details</h3></legend>
+
+        <label for="applicant">Applicant Address:</label>
+        <textarea name="applicant" id="applicant" cols="36" rows="3"></textarea>&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="district">district:</label>
+        <input type="text" name="district" id="district" pattern="[a-zA-Z]{8-16}" title="length should be min 8 and max 16 characters with combination of small and capital letters"><br><br>
+
+        <label for="mandal">Mandal:</label>
+        <input type="text" name="mandal" id="mandal" pattern="[a-zA-Z]{8-16}" title="length should be min 8 and max 16 characters with combination of small and capital letters">&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        <label for="village">Village:</label>
+        <input type="text" name="village" id="village" pattern="[a-zA-Z]{8-16}" title="length should be min 8 and max 16 characters with combination of small and capital letters"><br><br>
+
+</fieldset>
+
+<!-- pass type details -->
+ <fieldset>
+    <legend><h3>Pass Type Details</h3></legend>
+
+    <label for="city">City:</label>
+    <select name="city" id="city">
+        <option value="select" disabled>Select city</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="warangal">warangal</option>
+        <option value="Karimnagar">Karimnagar</option>
+    </select><br><br>
+
+    <label for="Pass type">Pass Type:</label>
+    <select name="pass type" id="pass type">
+        <option value="select" disabled></option>
+        <option value="ordinary">Ordinary</option>
+    </select>
+</fieldset>
+
+<!-- payment& pass collection -->
+ <fieldset>
+    <legend><h3>Mode of payment & Pass Collection</h3></legend>
+
+    <label for="select">Payment Mode:</label>
+    <select name="payment" id="payment">
+        <option value="select" disabled>Select Payment Mode</option>
+        <option value="credit">Credit card</option>
+        <option value="debit">Debit card</option>
+        <option value="upi">UPI</option>
+    </select><br><br>
+
+    <label for="pass">Pass Delivery Mode;</label>
+    <select name="pass" id="pass">
+        <option value="post">Post</option>
+        <option value="pickup">Pickup</option>
+    </select><br><br>
+
+    <label for="center pass">Center at which you want to collect pass:</label>
+    <select name="center pass" id="center pass">
+        <option value="kphb">KPHB</option>
+        <option value="kukatpally">Kukatpally</option>
+        <option value="ameerpet">Ameerpet</option>
+    </select>
+ </fieldset><br><br>
+
+ <!-- submit -->
+ <center>
+    <input type="submit" value="submit">
+ </center>
+
+</form> 
+    
+</body>
+</html>
